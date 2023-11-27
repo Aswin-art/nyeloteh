@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const SubscribtionSection = () => {
   return (
-    <div className="bg-blue-50 border border-blue-50 rounded-md p-5">
+    <div
+      className="bg-blue-50 border border-blue-50 rounded-md p-5"
+      data-aos="fade-up"
+    >
       <div className="flex flex-col lg:flex-row items-center gap-10 justify-center">
         <div className="lc">
           <Image
@@ -12,6 +15,7 @@ const SubscribtionSection = () => {
             width={500}
             height={500}
             className="rounded-lg"
+            loading="lazy"
           />
         </div>
         <div className="rc max-w-md flex flex-col justify-center">

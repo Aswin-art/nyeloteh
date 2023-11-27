@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CardArticle = () => {
   return (
-    <div className="max-w-sm">
+    <div className="max-w-sm" data-aos="fade-up">
       <div className="img">
         <Link href="#">
           <Image
