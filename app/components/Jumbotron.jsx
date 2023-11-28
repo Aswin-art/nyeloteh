@@ -14,7 +14,7 @@ const Jumbotron = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div className="mt-72">
+    <div className="mt-40 md:mt-52 xl:mt-60 2xl:mt-72">
       {/* <div className="grid grid-cols-2 items-center">
         <div className="rc">
           <h1 className="font-bold text-4xl">
@@ -69,7 +69,7 @@ const Jumbotron = () => {
         </div>
       </div> */}
       <div className="flex flex-col w-full">
-        <h1 className="font-bold text-6xl md:text-6xl lg:text-7xl 2xl:text-8xl max-w-4xl">
+        <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl max-w-4xl">
           Dunia diciptakan oleh kata-kata,
         </h1>
         <h2 className="font-bold text-3xl md:text-3xl xl:text-4xl 2xl:text-5xl mt-5 xl:mt-10">
