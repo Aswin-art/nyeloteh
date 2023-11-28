@@ -4,6 +4,7 @@ import Image from "next/image";
 const SubscribtionSection = () => {
   return (
     <div
+      id="subscribe"
       className="bg-blue-50 border border-blue-50 rounded-md p-5"
       data-aos="fade-up"
     >

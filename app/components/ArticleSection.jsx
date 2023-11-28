@@ -5,7 +5,7 @@ import Link from "next/link";
 const ArticleSection = () => {
   return (
     <>
-      <div className="flex justify-between items-center">
+      <div id="articles" className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-secondary">Artikel Terbaru</h1>
         <Link href={"/"} className="text-primary hover:underline text-md">
           Baca semua

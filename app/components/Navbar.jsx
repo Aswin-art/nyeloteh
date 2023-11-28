@@ -3,9 +3,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { initFlowbite } from "flowbite";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { data } = useSession();
+  const pathname = usePathname();
 
   useEffect(() => {
     initFlowbite();
@@ -24,7 +26,7 @@ const Navbar = () => {
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-secondary">
-              Nyeloteh
+              Nyèloteh
             </span>
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -121,35 +123,70 @@ const Navbar = () => {
               <li>
                 <Link
                   href={"/"}
-                  className="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-primary md:p-0 md:dark:text-blue-500"
+                  className={`block py-2 px-3 hover:bg-gray-100 ${
+                    pathname === "/"
+                      ? "bg-primary text-white md:text-primary md:bg-transparent"
+                      : "text-black"
+                  } rounded md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:text-blue-500`}
                 >
                   Beranda
                 </Link>
-                <div className="w-[5px] h-[5px] bg-primary rounded-full mx-auto"></div>
+                <div
+                  className={`w-[5px] h-[5px] bg-primary rounded-full mx-auto ${
+                    pathname === "/" ? "md:block" : "hidden"
+                  }`}
+                ></div>
               </li>
               <li>
                 <Link
                   href={"/articles"}
-                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={`block py-2 px-3 hover:bg-gray-100 ${
+                    pathname === "/articles"
+                      ? "bg-primary text-white md:text-primary md:bg-transparent"
+                      : "text-black"
+                  } rounded md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:text-blue-500`}
                 >
                   Artikel
                 </Link>
+                <div
+                  className={`w-[5px] h-[5px] bg-primary rounded-full mx-auto ${
+                    pathname === "/articles" ? "md:block" : "hidden"
+                  }`}
+                ></div>
+              </li>
+              <li>
+                <Link
+                  href={"/#subscribe"}
+                  className={`block py-2 px-3 hover:bg-gray-100 ${
+                    pathname === "#subscribe"
+                      ? "bg-primary text-white md:text-primary md:bg-transparent"
+                      : "text-black"
+                  } rounded md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:text-blue-500`}
+                >
+                  Berlangganan
+                </Link>
+                <div
+                  className={`w-[5px] h-[5px] bg-primary rounded-full mx-auto ${
+                    pathname === "/subscribe" ? "md:block" : "hidden"
+                  }`}
+                ></div>
               </li>
               <li>
                 <Link
                   href={"/whois"}
-                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={`block py-2 px-3 hover:bg-gray-100 ${
+                    pathname === "/whois"
+                      ? "bg-primary text-white md:text-primary md:bg-transparent"
+                      : "text-black"
+                  } rounded md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:text-blue-500`}
                 >
                   Tentang Kami
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href={"/about-us"}
-                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Hubungi Kami
-                </Link>
+                <div
+                  className={`w-[5px] h-[5px] bg-primary rounded-full mx-auto ${
+                    pathname === "/whois" ? "md:block" : "hidden"
+                  }`}
+                ></div>
               </li>
             </ul>
           </div>

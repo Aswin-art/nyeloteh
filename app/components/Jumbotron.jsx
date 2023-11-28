@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import TextTransition, { presets } from "react-text-transition";
 
 const TEXTS = ["Sutradara", "Penulis", "Jagoan", "Pemimpin"];
@@ -13,7 +14,7 @@ const Jumbotron = () => {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div className="mt-40">
+    <div className="mt-72">
       {/* <div className="grid grid-cols-2 items-center">
         <div className="rc">
           <h1 className="font-bold text-4xl">
@@ -68,10 +69,10 @@ const Jumbotron = () => {
         </div>
       </div> */}
       <div className="flex flex-col w-full">
-        <h1 className="font-bold text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl">
+        <h1 className="font-bold text-6xl md:text-6xl lg:text-7xl 2xl:text-8xl max-w-4xl">
           Dunia diciptakan oleh kata-kata,
         </h1>
-        <h2 className="font-bold text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl mt-5 xl:mt-10">
+        <h2 className="font-bold text-3xl md:text-3xl xl:text-4xl 2xl:text-5xl mt-5 xl:mt-10">
           Jadilah{" "}
           <span className="text-secondary">
             <TextTransition springConfig={presets.gentle} inline={true}>
@@ -80,7 +81,7 @@ const Jumbotron = () => {
           </span>{" "}
           dari ceritamu.
         </h2>
-        <p className="mt-10 text-gray-700 text-sm md:text-lg w-[70%] ms-2">
+        <p className="lg:mt-10 mt-5 text-gray-700 text-sm md:text-lg w-[70%] ms-2">
           Jangan malu untuk menulis, karena setiap kata yang ditorehkan
           membentuk lukisan keindahan dalam karya tak terbatas yang mengagumkan.
         </p>
@@ -90,7 +91,7 @@ const Jumbotron = () => {
             Mulai Menulis
           </button>
           <button className="border-secondary inline-flex items-center gap-2 border text-secondary px-4 py-3 rounded text-sm md:text-md transition-all hover:border-primary hover:text-primary">
-            Baca Artikel
+            <Link href={"#articles"}>Baca Artikel</Link>
             <svg
               className="w-3 h-3 text-secondary-800 dark:text-white"
               aria-hidden="true"

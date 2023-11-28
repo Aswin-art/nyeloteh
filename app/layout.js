@@ -16,7 +16,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const session = await getServerSession();
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <ProgressBarProvider>
           <NextAuthProvider session={session}>

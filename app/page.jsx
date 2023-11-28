@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Container background={"bg-blue-50"}>
-        <div className="jumbotron mb-40">
+        <div className="jumbotron mb-72">
           <Jumbotron />
         </div>
       </Container>
