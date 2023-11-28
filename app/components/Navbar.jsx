@@ -244,7 +244,7 @@ const Navbar = () => {
                   <button
                     type="button"
                     onClick={() => signIn("google")}
-                    className="bg-secondary text-white px-4 py-3 rounded text-sm hover:bg-primary"
+                    className="bg-secondary text-white px-4 py-3 rounded text-sm hover:bg-primary block lg:hidden"
                   >
                     Masuk dengan Google
                   </button>
