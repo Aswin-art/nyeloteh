@@ -74,7 +74,7 @@ const page = () => {
             className="rounded-xl"
           />
 
-          <div className="mt-5">
+          <div className="mt-10">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
               alias atque ea voluptates omnis, iusto quibusdam distinctio
