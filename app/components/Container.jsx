@@ -11,9 +11,7 @@ const Container = ({ children, background }) => {
   }, []);
   return (
     <div className={background ? background : ""}>
-      <div className="max-w-screen-xl items-center justify-between mx-auto p-4">
-        {children}
-      </div>
+      <div className="max-w-screen-xl mx-auto p-4">{children}</div>
     </div>
   );
 };

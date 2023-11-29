@@ -3,6 +3,7 @@ import React from "react";
 import Container from "../components/Container";
 import CardArticle from "../components/CardArticle";
 import Typewriter from "typewriter-effect";
+import SearchBar from "../components/SearchBar";
 
 const page = () => {
   return (
@@ -37,6 +38,9 @@ const page = () => {
       </Container>
 
       <Container>
+        <div className="my-20">
+          <SearchBar />
+        </div>
         <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-20 mt-10">
           <CardArticle />
           <CardArticle />
