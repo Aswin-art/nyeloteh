@@ -8,11 +8,11 @@ const Private = ({ children }) => {
   const { data } = useSession();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!data?.user) {
-      router.back();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!data?.user) {
+  //     router.back();
+  //   }
+  // }, []);
   return <NextAuthProvider session={data}>{children}</NextAuthProvider>;
 };
 
